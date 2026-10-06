@@ -155,7 +155,7 @@ const products = [
     id: "cort-kx100",
     name: "Cort KX100 — Guitarra eléctrica azul metalizado",
     category: "Música",
-    price: 450000,
+    price: 600000,
     image: "./assets/photos/cort-kx100-02.webp",
     description: "Guitarra eléctrica Cort KX100 de 6 cuerdas, en terminación azul metalizado. Doble humbucker y puente fijo para un sonido potente y una afinación estable; ideal para rock y metal, y para quien busca una buena primera eléctrica.",
     specs: [
@@ -169,11 +169,12 @@ const products = [
     id: "roland-spd-sx",
     name: "Roland SPD-SX — Pad de percusión con sampler",
     category: "Música",
-    price: 1500000,
-    image: "./assets/photos/roland-spd-sx-01.svg",
-    imageNote: "Imagen ilustrativa. Consultá por fotos reales de la unidad.",
-    description: "Pad de percusión electrónica y sampler Roland SPD-SX, el estándar en escenarios para disparar pistas, loops, clicks y sonidos propios con baquetas. Cargá tus samples por USB y tocalos desde 9 pads sensibles a la dinámica.",
+    price: 1800000,
+    image: "./assets/photos/roland-spd-sx-01.webp",
+    imageNote: "Foto ilustrativa del modelo. Consultá por fotos reales de la unidad.",
+    description: "Pad de percusión electrónica y sampler Roland SPD-SX, el estándar en escenarios para disparar pistas, loops, clicks y sonidos propios con baquetas. Cargá tus samples por USB y tocalos desde 9 pads sensibles a la dinámica. Unidad en perfecto estado; el único detalle es una marca en la pantalla.",
     specs: [
+      "Estado: impecable, salvo una marca en la pantalla.",
       "9 pads sensibles a la dinámica.",
       "Memoria interna para tus propios samples, importables por USB.",
       "Efectos master y por pad, con dos perillas de control en tiempo real.",
@@ -379,7 +380,7 @@ function productCard(product) {
           <button class="card-gallery-nav card-gallery-next" type="button" data-card-next aria-label="Foto siguiente de ${escapeHtml(product.name)}">›</button>
           <span class="photo-count" data-card-counter>1 / ${product.images.length}</span>
         ` : ""}
-        ${product.imageNote ? `<span class="image-note">Imagen ilustrativa</span>` : ""}
+        ${product.imageNote ? `<span class="image-note">Foto ilustrativa</span>` : ""}
       </div>
       <div class="product-body">
         <h3 class="product-title">
