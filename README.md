@@ -56,4 +56,4 @@ Las galerías usan las fotos reales entregadas por el vendedor para los 9 produc
 - Cada tarjeta muestra título, precio y un botón principal “Comprar en Mercado Libre”.
 - Tocar la foto o el título abre las fotos y los detalles; en celular los botones de compra quedan fijos abajo.
 - Enlaces directos a un producto: agregar `#id-del-producto` a la URL (por ejemplo `#korg-volca-sample`).
-- Las fotos de cada producto se listan en `galleryPhotos` (en `app.js`), dentro de `assets/photos/` con sus miniaturas en `assets/photos/thumbs/`.
+- Las fotos de cada producto se listan en `galleryPhotos` (en `app.js`), dentro de `assets/photos/` con sus miniaturas en `assets/photos/thumbs/` (≈260 px) y versiones medianas para las tarjetas en `assets/photos/medium/` (800 px de ancho). Al agregar una foto nueva, generar también esas dos versiones con el mismo nombre.

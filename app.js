@@ -372,7 +372,7 @@ function productCard(product) {
     <article class="product-card" data-product-id="${product.id}">
       <div class="product-media" data-card-gallery data-product-id="${product.id}" data-card-index="0">
         <button class="media-open" type="button" data-open-product="${product.id}" aria-label="Ver fotos y detalles de ${escapeHtml(product.name)}">
-          <img data-card-image src="${product.images[0]}" alt="${escapeHtml(product.name)} — foto 1 de ${product.images.length}" loading="lazy" width="720" height="540" />
+          <img data-card-image src="${photoSrc(product.images[0], "medium")}" alt="${escapeHtml(product.name)} — foto 1 de ${product.images.length}" loading="lazy" width="720" height="540" />
         </button>
         <span class="product-category">${escapeHtml(product.category)}</span>
         ${hasGallery ? `
@@ -413,10 +413,13 @@ function setCardGalleryImage(media, nextIndex) {
   const image = media.querySelector("[data-card-image]");
   const counter = media.querySelector("[data-card-counter]");
   if (image) {
-    image.src = product.images[index];
+    showProgressive(image, photoSrc(product.images[index], "medium"), [photoSrc(product.images[index], "thumb")]);
     image.alt = `${product.name} — foto ${index + 1} de ${total}`;
   }
   if (counter) counter.textContent = `${index + 1} / ${total}`;
+  // Adelantar la foto siguiente para que el próximo toque sea instantáneo.
+  preload(photoSrc(product.images[(index + 1) % total], "medium"));
+  preload(photoSrc(product.images[(index - 1 + total) % total], "medium"));
 }
 
 function moveCardGallery(media, delta) {
@@ -461,6 +464,7 @@ function filteredProducts() {
 function renderProducts() {
   const list = filteredProducts();
   productGrid.innerHTML = list.map(productCard).join("");
+  observeCards();
   resultsCount.textContent = `${list.length} ${list.length === 1 ? "producto" : "productos"}`;
   emptyState.hidden = list.length !== 0;
 }
@@ -472,10 +476,81 @@ function renderAll() {
 
 let activeGallery = null;
 
-function thumbnailSrc(src) {
+/* ---------- Carga progresiva de fotos ----------
+   Cada foto existe en tres tamaños: thumbs/ (~10 KB), medium/ (~70 KB, tarjetas)
+   y el original (galería ampliada). Al cambiar de foto se muestra al instante la
+   versión más liviana ya disponible y se reemplaza cuando llega la de mejor calidad. */
+const PHOTO_DIRS = { thumb: "/assets/photos/thumbs/", medium: "/assets/photos/medium/", full: "/assets/photos/" };
+const loadedPhotos = new Set();
+const pendingPhotos = new Map();
+
+function photoSrc(src, size) {
   if (!src.includes("/assets/photos/")) return src;
-  return src.replace("/assets/photos/", "/assets/photos/thumbs/");
+  return src.replace("/assets/photos/", PHOTO_DIRS[size]);
 }
+
+function photoKey(src) {
+  return new URL(src, location.href).href;
+}
+
+function preload(src) {
+  const key = photoKey(src);
+  if (loadedPhotos.has(key)) return Promise.resolve();
+  if (pendingPhotos.has(key)) return pendingPhotos.get(key);
+  const promise = new Promise(resolve => {
+    const img = new Image();
+    img.decoding = "async";
+    img.onload = () => { loadedPhotos.add(key); pendingPhotos.delete(key); resolve(); };
+    img.onerror = () => { pendingPhotos.delete(key); resolve(); };
+    img.src = src;
+  });
+  pendingPhotos.set(key, promise);
+  return promise;
+}
+
+function showProgressive(img, src, fallbacks = []) {
+  img.dataset.wantSrc = src;
+  if (loadedPhotos.has(photoKey(src))) {
+    img.src = src;
+    img.classList.remove("is-loading");
+    return;
+  }
+  const quick = fallbacks.find(candidate => loadedPhotos.has(photoKey(candidate))) || fallbacks[0];
+  if (quick) {
+    img.src = quick;
+    img.classList.add("is-loading");
+  }
+  preload(src).then(() => {
+    if (img.dataset.wantSrc !== src) return;
+    img.src = src;
+    img.classList.remove("is-loading");
+  });
+}
+
+// Registrar las fotos que el navegador ya cargó por su cuenta (img del HTML).
+document.addEventListener("load", event => {
+  if (event.target instanceof HTMLImageElement && !event.target.classList.contains("is-loading")) {
+    loadedPhotos.add(photoKey(event.target.currentSrc || event.target.src));
+  }
+}, true);
+
+// Cuando una tarjeta entra en pantalla, precargar miniaturas y la segunda foto.
+const cardObserver = "IntersectionObserver" in window ? new IntersectionObserver(entries => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    cardObserver.unobserve(entry.target);
+    const product = products.find(item => item.id === entry.target.dataset.productId);
+    if (!product || product.images.length < 2) continue;
+    product.images.forEach(src => preload(photoSrc(src, "thumb")));
+    preload(photoSrc(product.images[1], "medium"));
+  }
+}, { rootMargin: "200px" }) : null;
+
+function observeCards() {
+  if (!cardObserver) return;
+  productGrid.querySelectorAll("[data-card-gallery]").forEach(media => cardObserver.observe(media));
+}
+
 
 function setGalleryImage(index) {
   if (!activeGallery) return;
@@ -487,7 +562,8 @@ function setGalleryImage(index) {
   const main = dialogContent.querySelector("[data-gallery-main]");
   const counter = dialogContent.querySelector("[data-gallery-counter]");
   if (main) {
-    main.src = product.images[activeGallery.index];
+    const src = product.images[activeGallery.index];
+    showProgressive(main, photoSrc(src, "full"), [photoSrc(src, "medium"), photoSrc(src, "thumb")]);
     main.alt = `${product.name} — foto ${activeGallery.index + 1} de ${total}`;
   }
   if (counter) counter.textContent = `${activeGallery.index + 1} / ${total}`;
@@ -496,6 +572,7 @@ function setGalleryImage(index) {
     button.setAttribute("aria-current", i === activeGallery.index ? "true" : "false");
   });
   dialogContent.querySelector("[data-gallery-thumb].is-active")?.scrollIntoView({ block: "nearest", inline: "nearest" });
+  preload(photoSrc(product.images[(activeGallery.index + 1) % total], "full"));
 }
 
 function openProduct(id, { updateHash = true } = {}) {
@@ -509,7 +586,7 @@ function openProduct(id, { updateHash = true } = {}) {
     <article class="dialog-product">
       <div class="dialog-gallery" data-gallery-root>
         <div class="dialog-image-wrap">
-          <img data-gallery-main src="${product.images[0]}" alt="${escapeHtml(product.name)} — foto 1 de ${product.images.length}" />
+          <img data-gallery-main src="${photoSrc(product.images[0], "medium")}" alt="${escapeHtml(product.name)} — foto 1 de ${product.images.length}" />
           ${hasGallery ? `
             <button class="gallery-nav gallery-prev" type="button" data-gallery-prev aria-label="Foto anterior">‹</button>
             <button class="gallery-nav gallery-next" type="button" data-gallery-next aria-label="Foto siguiente">›</button>
@@ -520,7 +597,7 @@ function openProduct(id, { updateHash = true } = {}) {
           <div class="gallery-thumbs" aria-label="Fotos del producto">
             ${product.images.map((src, index) => `
               <button class="gallery-thumb ${index === 0 ? "is-active" : ""}" type="button" data-gallery-thumb="${index}" aria-label="Ver foto ${index + 1}" aria-current="${index === 0 ? "true" : "false"}">
-                <img src="${thumbnailSrc(src)}" alt="" loading="lazy" />
+                <img src="${photoSrc(src, "thumb")}" alt="" loading="lazy" />
               </button>
             `).join("")}
           </div>
@@ -548,6 +625,7 @@ function openProduct(id, { updateHash = true } = {}) {
 
   if (updateHash && location.hash !== `#${id}`) history.replaceState(null, "", `#${id}`);
   if (!dialog.open && typeof dialog.showModal === "function") dialog.showModal();
+  setGalleryImage(0); // muestra la versión mediana (ya en caché) y sube a la original al cargar
   dialogContent.querySelector(".dialog-details").scrollTop = 0;
   dialog.scrollTop = 0;
 
