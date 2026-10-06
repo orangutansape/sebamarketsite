@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SebaMarket: instrumentos musicales, tecnología, gaming y coleccionables usados en venta. Fotos reales, precios en pesos y compra por Mercado Libre." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="SebaMarket — Productos en venta" />
+  <meta property="og:description" content="Instrumentos, tecnología, gaming y coleccionables usados. Fotos reales y compra por Mercado Libre." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/images/korg-microkorg-mk1.webp" />
+  <title>SebaMarket — Productos en venta</title>
+  <script>
+    (() => {
+      let saved = null;
+      try { saved = localStorage.getItem("sebamarket-theme"); } catch {}
+      const theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#productos">Saltar a productos</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="SebaMarket — inicio">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>SebaMarket</span>
+      </a>
+      <div class="header-actions">
+        <a class="header-link" href="#como-comprar">Cómo comprar</a>
+        <a class="header-contact" href="mailto:encinas.leonel@gmail.com">Contactar</a>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Activar modo oscuro" title="Cambiar tema">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="intro shell" aria-labelledby="introTitle">
+      <h1 id="introTitle">Productos en venta</h1>
+      <p class="intro-copy">
+        Instrumentos, tecnología, gaming y coleccionables usados, con fotos reales de cada unidad.
+        Tocá un producto para ver todas las fotos y los detalles, y compralo por Mercado Libre o consultame por email.
+      </p>
+      <ul class="trust-list" aria-label="Por qué comprar acá">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Compra protegida por Mercado Libre</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Fotos reales del producto</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Consultas directas por email</li>
+      </ul>
+    </section>
+
+    <section class="catalog shell" id="productos" aria-label="Catálogo de productos">
+      <div class="toolbar" aria-label="Filtros del catálogo">
+        <label class="search-box">
+          <span class="sr-only">Buscar productos</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65A8 8 0 1 1 3 11a8 8 0 0 1 16 0Z"/></svg>
+          <input id="searchInput" type="search" placeholder="Buscar: sintetizador, 3DS, MIDI..." autocomplete="off" />
+        </label>
+
+        <label class="sort-box">
+          <span>Ordenar</span>
+          <select id="sortSelect">
+            <option value="featured">Destacados</option>
+            <option value="price-asc">Menor precio</option>
+            <option value="price-desc">Mayor precio</option>
+            <option value="name">Nombre A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filters-row">
+        <div id="categoryFilters" class="category-filters" role="group" aria-label="Filtrar por categoría"></div>
+        <p id="resultsCount" class="results-count" aria-live="polite"></p>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+      <div id="emptyState" class="empty-state" hidden>
+        <h3>No hay resultados</h3>
+        <p>Probá con otra búsqueda o categoría.</p>
+        <button id="resetFilters" class="button button-secondary" type="button">Ver todos los productos</button>
+      </div>
+    </section>
+
+    <section class="buy-info" id="como-comprar" aria-labelledby="buyTitle">
+      <div class="shell">
+        <h2 id="buyTitle" class="section-title">Cómo comprar</h2>
+        <ol class="info-grid">
+          <li>
+            <span class="step">1</span>
+            <h3>Elegí el producto</h3>
+            <p>Mirá las fotos, el precio y los detalles. Todas las fotos son de la unidad que se vende.</p>
+          </li>
+          <li>
+            <span class="step">2</span>
+            <h3>Comprá en Mercado Libre</h3>
+            <p>El botón amarillo te lleva a la publicación. Ahí pagás con la protección de compra de Mercado Libre.</p>
+          </li>
+          <li>
+            <span class="step">3</span>
+            <h3>¿Dudas? Consultá</h3>
+            <p>Con “Consultar” se abre un email con el producto ya cargado. El precio y stock final se confirman en la publicación.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <strong>SebaMarket</strong>
+        <p>Productos publicados también en Mercado Libre. Precios en pesos argentinos.</p>
+      </div>
+      <a href="mailto:encinas.leonel@gmail.com">encinas.leonel@gmail.com</a>
+    </div>
+  </footer>
+
+  <dialog id="productDialog" class="product-dialog" aria-labelledby="dialogTitle">
+    <div class="dialog-frame">
+      <button id="dialogClose" class="dialog-close" type="button" aria-label="Cerrar">×</button>
+      <div id="dialogContent"></div>
+    </div>
+  </dialog>
+
+  <noscript>
+    <div class="noscript">Este sitio necesita JavaScript para mostrar el catálogo.</div>
+  </noscript>
+</body>
+</html>
