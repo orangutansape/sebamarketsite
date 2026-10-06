@@ -29,9 +29,9 @@ Cada producto tiene:
   name: "Marca Modelo — Tipo de producto", // el texto después de " — " se muestra como subtítulo
   category: "Categoría",
   price: 100000,
-  shipping: "Texto de envío",
   image: "./assets/images/archivo.webp",
-  ml: "https://articulo.mercadolibre.com.ar/...",
+  ml: "https://articulo.mercadolibre.com.ar/...", // opcional: sin link, el botón principal pasa a ser "Consultar para comprar"
+  imageNote: "Imagen ilustrativa...", // opcional: para fotos que no son de la unidad real
   description: "Descripción",
   specs: ["Dato 1", "Dato 2"]
 }
@@ -53,6 +53,7 @@ Las galerías usan las fotos reales entregadas por el vendedor para los 9 produc
 - Modo claro/oscuro con preferencia guardada en el navegador.
 - Carrusel de fotos directamente en cada tarjeta del catálogo, además de la galería ampliada en Detalles.
 - En celular, las fotos también se pueden recorrer deslizando horizontalmente.
-- Cada tarjeta muestra título, precio, envío y un botón principal “Comprar en Mercado Libre”.
+- Cada tarjeta muestra título, precio y un botón principal “Comprar en Mercado Libre”.
 - Tocar la foto o el título abre las fotos y los detalles; en celular los botones de compra quedan fijos abajo.
 - Enlaces directos a un producto: agregar `#id-del-producto` a la URL (por ejemplo `#korg-volca-sample`).
+- Las fotos de cada producto se listan en `galleryPhotos` (en `app.js`), dentro de `assets/photos/` con sus miniaturas en `assets/photos/thumbs/`.

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Ilustración de un Roland SPD-SX">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9edf2"/>
+      <stop offset="1" stop-color="#cfd6df"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3f47"/>
+      <stop offset="1" stop-color="#1d2026"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2e33"/>
+      <stop offset="1" stop-color="#121417"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <ellipse cx="600" cy="800" rx="470" ry="40" fill="#000" opacity=".18"/>
+  <!-- cuerpo -->
+  <path d="M150 140 Q150 100 190 100 H1010 Q1050 100 1050 140 L1080 760 Q1082 790 1050 790 H150 Q118 790 120 760 Z" fill="url(#body)"/>
+  <!-- panel de control -->
+  <rect x="200" y="125" width="800" height="120" rx="14" fill="#14161a"/>
+  <rect x="470" y="150" width="260" height="70" rx="8" fill="#0b2a3a"/>
+  <rect x="482" y="162" width="236" height="46" rx="4" fill="#1f6f8f" opacity=".7"/>
+  <g fill="#9aa3ad">
+    <circle cx="260" cy="185" r="24"/><circle cx="340" cy="185" r="24"/>
+    <circle cx="800" cy="185" r="14"/><circle cx="850" cy="185" r="14"/><circle cx="900" cy="185" r="14"/><circle cx="950" cy="185" r="14"/>
+  </g>
+  <g fill="#e04040"><circle cx="800" cy="150" r="5"/><circle cx="850" cy="150" r="5"/><circle cx="900" cy="150" r="5"/><circle cx="950" cy="150" r="5"/></g>
+  <!-- pads: fila superior -->
+  <g fill="url(#pad)" stroke="#4a5059" stroke-width="4">
+    <rect x="200" y="275" width="250" height="110" rx="18"/>
+    <rect x="475" y="275" width="250" height="110" rx="18"/>
+    <rect x="750" y="275" width="250" height="110" rx="18"/>
+    <rect x="195" y="410" width="255" height="160" rx="20"/>
+    <rect x="475" y="410" width="250" height="160" rx="20"/>
+    <rect x="750" y="410" width="255" height="160" rx="20"/>
+    <rect x="190" y="595" width="260" height="165" rx="20"/>
+    <rect x="475" y="595" width="250" height="165" rx="20"/>
+    <rect x="750" y="595" width="260" height="165" rx="20"/>
+  </g>
+</svg>

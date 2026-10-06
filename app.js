@@ -6,7 +6,6 @@ const products = [
     name: "Nintendo New 3DS XL Standard — Negro metálico",
     category: "Gaming",
     price: 650000,
-    shipping: "Envío gratis en Mercado Libre",
     image: "./assets/images/nintendo-new-3ds-xl.webp",
     ml: "https://articulo.mercadolibre.com.ar/MLA-2080439513-nintendo-new-3ds-xl-standard-color-negro-metalico-negro-metalico-_JM",
     description: "Consola portátil New Nintendo 3DS XL en edición Standard y color negro metálico. Incorpora controles adicionales como C Stick y botones ZL/ZR, pantalla táctil inferior y compatibilidad con la biblioteca de Nintendo 3DS y Nintendo DS.",
@@ -22,7 +21,6 @@ const products = [
     name: "Zoom G1u — Pedalera multiefectos USB",
     category: "Música",
     price: 300000,
-    shipping: "Envío a cargo del comprador",
     image: "./assets/images/zoom-g1u.webp",
     ml: "https://articulo.mercadolibre.com.ar/MLA-1972311641-zoom-g1u-pedalera-multiefectos-efectos-usb-negro-_JM",
     description: "Pedalera multiefectos para guitarra con interfaz de audio USB. Integra modelado de amplificadores y efectos, afinador, patrones rítmicos y función de looping para práctica, grabación y uso en vivo.",
@@ -38,7 +36,6 @@ const products = [
     name: "Korg Volca Sample — Sampler portátil MIDI",
     category: "Música",
     price: 300000,
-    shipping: "Envío a cargo del comprador",
     image: "./assets/images/korg-volca-sample.webp",
     ml: "https://articulo.mercadolibre.com.ar/MLA-3762434164-korg-volca-sample-sampler-portatil-midi-digital-blanco-_JM",
     description: "Sampler y secuenciador compacto de la serie Volca. Permite trabajar con muestras PCM, crear patrones de 10 partes y secuencias de 16 pasos, con efectos, sincronización y entrada MIDI.",
@@ -54,7 +51,6 @@ const products = [
     name: "Huion Inspiroy H640P — Tableta gráfica",
     category: "Tecnología",
     price: 85000,
-    shipping: "Envío a cargo del comprador",
     image: "./assets/images/huion-h640p.webp",
     ml: "https://articulo.mercadolibre.com.ar/MLA-2092021175-tableta-grafica-huion-inspiroy-h640p-con-lapiz-y-cable-negro-_JM",
     description: "Tableta gráfica compacta con lápiz digital sin batería, seis teclas programables y conexión Micro USB. Pensada para dibujo, edición, ilustración y trabajo creativo en computadora o dispositivos compatibles.",
@@ -70,7 +66,6 @@ const products = [
     name: "Novation Launchpad Mini — Controlador MIDI USB",
     category: "Música",
     price: 135000,
-    shipping: "Envío a cargo del comprador",
     image: "./assets/images/novation-launchpad-mini.webp",
     ml: "https://articulo.mercadolibre.com.ar/MLA-2080401741-controlador-pad-usb-novation-launchpad-mini-negro-_JM",
     description: "Controlador MIDI compacto Novation Launchpad Mini con matriz de 8 × 8 pads, pensado para disparar clips, escenas y controles de sesión. La unidad de las fotos incluye su cable USB naranja y está orientada especialmente al uso con Ableton Live.",
@@ -86,7 +81,6 @@ const products = [
     name: "OVNI Drum plateado — 9 notas",
     category: "Música",
     price: 620000,
-    shipping: "Envío a cargo del comprador",
     image: "./assets/images/ovnidrum-9-notas.webp",
     ml: "https://articulo.mercadolibre.com.ar/MLA-2110533193-ovnidrum-plateado-9-notas-steel-drum-plateado-_JM",
     description: "Steel tongue drum melódico de 9 notas en terminación plateada. Puede tocarse con las manos o con baquetas de goma y está pensado para interpretación intuitiva, relajación, improvisación y exploración armónica.",
@@ -102,7 +96,6 @@ const products = [
     name: "Arturia DrumBrute Impact — Caja de ritmos analógica",
     category: "Música",
     price: 500000,
-    shipping: "Envío a cargo del comprador",
     image: "./assets/images/arturia-drumbrute-impact.webp",
     ml: "https://articulo.mercadolibre.com.ar/MLA-3762433002-caja-de-ritmos-analoga-drumbrute-impact-arturia-drumbrute-negro-_JM",
     description: "Caja de ritmos analógica orientada a secuenciación y performance. Ofrece 10 sonidos analógicos, patrones de hasta 64 pasos, polirritmia, swing, variación aleatoria y distorsión de salida.",
@@ -118,7 +111,6 @@ const products = [
     name: "Korg microKORG MK1 — Sintetizador + vocoder",
     category: "Música",
     price: 700000,
-    shipping: "Envío a cargo del comprador",
     image: "./assets/images/korg-microkorg-mk1.webp",
     ml: "https://articulo.mercadolibre.com.ar/MLA-3762180898-korg-microkorg-mk1-sintetizador-modelado-analogico-vocoder-_JM",
     description: "Sintetizador de modelado analógico con vocoder, teclado compacto de 37 mini teclas y controles en tiempo real. Un formato portátil con programas de fábrica, arpegiador, efectos y conectividad MIDI.",
@@ -134,7 +126,6 @@ const products = [
     name: "Lote de cassettes usados",
     category: "Coleccionables",
     price: 140000,
-    shipping: "Envío gratis en Mercado Libre",
     image: "./assets/images/lote-cassettes.webp",
     ml: "https://articulo.mercadolibre.com.ar/MLA-3915366764-lote-de-cassettes-usados-azul-marino-_JM",
     description: "Lote de cassettes usados vendido en conjunto. Ideal para colección, archivo, escucha o proyectos con formato analógico. Consultá por el detalle de títulos, estado y contenido del lote.",
@@ -144,10 +135,66 @@ const products = [
       "Producto usado.",
       "Consultar por títulos individuales, estado y cualquier detalle no visible en la publicación."
     ]
+  },
+  {
+    id: "roland-sp-404a",
+    name: "Roland SP-404A — Sampler y procesador de efectos",
+    category: "Música",
+    price: 850000,
+    image: "./assets/photos/roland-sp-404a-01.webp",
+    description: "Sampler portátil Roland SP-404A, un clásico del beatmaking y el lo-fi. Grabá desde línea o el micrófono incorporado, disparalo desde 12 pads, armá patrones con el secuenciador y procesá todo con su amplia lista de efectos en tiempo real.",
+    specs: [
+      "12 pads + Sub Pad y Hold, con 10 bancos de samples (A–J).",
+      "Secuenciador de patrones, resampleo y edición de samples (start/end, BPM).",
+      "Efectos en tiempo real: filtro + drive, isolator, delay, voice trans, DJFX looper y más de 20 MFX.",
+      "Micrófono incorporado, entrada de mic, Line In/Out RCA, MIDI IN y salida de auriculares.",
+      "Almacenamiento en tarjeta SD/SDHC. Alimentación con adaptador Roland PSB-1U."
+    ]
+  },
+  {
+    id: "cort-kx100",
+    name: "Cort KX100 — Guitarra eléctrica azul metalizado",
+    category: "Música",
+    price: 450000,
+    image: "./assets/photos/cort-kx100-02.webp",
+    description: "Guitarra eléctrica Cort KX100 de 6 cuerdas, en terminación azul metalizado. Doble humbucker y puente fijo para un sonido potente y una afinación estable; ideal para rock y metal, y para quien busca una buena primera eléctrica.",
+    specs: [
+      "Configuración HH: dos micrófonos humbucker.",
+      "Puente fijo (hardtail) con cuerdas pasantes.",
+      "Controles de volumen y tono con selector de 3 posiciones.",
+      "Clavijero 3 + 3 y diapasón oscuro con marcadores de puntos."
+    ]
+  },
+  {
+    id: "roland-spd-sx",
+    name: "Roland SPD-SX — Pad de percusión con sampler",
+    category: "Música",
+    price: 1500000,
+    image: "./assets/photos/roland-spd-sx-01.svg",
+    imageNote: "Imagen ilustrativa. Consultá por fotos reales de la unidad.",
+    description: "Pad de percusión electrónica y sampler Roland SPD-SX, el estándar en escenarios para disparar pistas, loops, clicks y sonidos propios con baquetas. Cargá tus samples por USB y tocalos desde 9 pads sensibles a la dinámica.",
+    specs: [
+      "9 pads sensibles a la dinámica.",
+      "Memoria interna para tus propios samples, importables por USB.",
+      "Efectos master y por pad, con dos perillas de control en tiempo real.",
+      "Entradas para pads y pedales externos.",
+      "Salidas Master y Sub para mandar pistas y click por separado."
+    ]
   }
 ];
 
 const galleryPhotos = {
+  "roland-sp-404a": [
+    "./assets/photos/roland-sp-404a-01.webp",
+    "./assets/photos/roland-sp-404a-02.webp",
+    "./assets/photos/roland-sp-404a-03.webp"
+  ],
+  "cort-kx100": [
+    "./assets/photos/cort-kx100-02.webp",
+    "./assets/photos/cort-kx100-01.webp",
+    "./assets/photos/cort-kx100-03.webp",
+    "./assets/photos/cort-kx100-04.webp"
+  ],
   "nintendo-new-3ds-xl": [
     "./assets/photos/nintendo-new-3ds-xl-01.webp",
     "./assets/photos/nintendo-new-3ds-xl-02.webp",
@@ -232,7 +279,6 @@ products.forEach(product => {
   const [title, ...rest] = product.name.split(" — ");
   product.title = title;
   product.subtitle = rest.join(" — ");
-  product.freeShipping = /gratis/i.test(product.shipping);
 });
 
 const currency = new Intl.NumberFormat("es-AR", {
@@ -307,12 +353,16 @@ function escapeHtml(value) {
 
 function emailHref(product) {
   const subject = encodeURIComponent(`Consulta por ${product.name}`);
-  const body = encodeURIComponent(`Hola, quería consultar por el producto “${product.name}” publicado a ${currency.format(product.price)}.\n\nLink: ${product.ml}\n\nGracias.`);
+  const link = product.ml ? `\n\nLink: ${product.ml}` : "";
+  const body = encodeURIComponent(`Hola, quería consultar por el producto “${product.name}” publicado a ${currency.format(product.price)}.${link}\n\nGracias.`);
   return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 }
 
-function shippingBadge(product) {
-  return `<span class="shipping ${product.freeShipping ? "shipping-free" : ""}">${escapeHtml(product.shipping)}</span>`;
+// Botones de compra: Mercado Libre si hay publicación; si no, la consulta por email pasa a ser la acción principal.
+function buyButton(product) {
+  return product.ml
+    ? `<a class="button button-ml" href="${product.ml}" target="_blank" rel="noopener noreferrer">Comprar en Mercado Libre</a>`
+    : `<a class="button button-primary" href="${emailHref(product)}">Consultar para comprar</a>`;
 }
 
 function productCard(product) {
@@ -329,22 +379,20 @@ function productCard(product) {
           <button class="card-gallery-nav card-gallery-next" type="button" data-card-next aria-label="Foto siguiente de ${escapeHtml(product.name)}">›</button>
           <span class="photo-count" data-card-counter>1 / ${product.images.length}</span>
         ` : ""}
+        ${product.imageNote ? `<span class="image-note">Imagen ilustrativa</span>` : ""}
       </div>
       <div class="product-body">
         <h3 class="product-title">
           <button type="button" data-open-product="${product.id}">${escapeHtml(product.title)}</button>
         </h3>
         ${product.subtitle ? `<p class="product-subtitle">${escapeHtml(product.subtitle)}</p>` : ""}
-        <div class="product-price-row">
-          <span class="product-price">${currency.format(product.price)}</span>
-          ${shippingBadge(product)}
-        </div>
+        <div class="product-price">${currency.format(product.price)}</div>
         <p class="product-description">${escapeHtml(product.description)}</p>
         <div class="product-actions">
-          <a class="button button-ml" href="${product.ml}" target="_blank" rel="noopener noreferrer">Comprar en Mercado Libre</a>
-          <div class="product-actions-secondary">
+          ${buyButton(product)}
+          <div class="product-actions-secondary ${product.ml ? "" : "is-single"}">
             <button class="button button-secondary" type="button" data-open-product="${product.id}">Fotos y detalles</button>
-            <a class="button button-secondary" href="${emailHref(product)}">Consultar</a>
+            ${product.ml ? `<a class="button button-secondary" href="${emailHref(product)}">Consultar</a>` : ""}
           </div>
         </div>
       </div>
@@ -482,17 +530,17 @@ function openProduct(id, { updateHash = true } = {}) {
         <h2 id="dialogTitle">${escapeHtml(product.title)}</h2>
         ${product.subtitle ? `<p class="dialog-subtitle">${escapeHtml(product.subtitle)}</p>` : ""}
         <div class="dialog-price">${currency.format(product.price)}</div>
-        ${shippingBadge(product)}
-        <div class="dialog-actions">
-          <a class="button button-ml" href="${product.ml}" target="_blank" rel="noopener noreferrer">Comprar en Mercado Libre</a>
-          <a class="button button-secondary" href="${emailHref(product)}">Consultar por email</a>
+        ${product.imageNote ? `<p class="dialog-image-note">${escapeHtml(product.imageNote)}</p>` : ""}
+        <div class="dialog-actions ${product.ml ? "" : "is-single"}">
+          ${buyButton(product)}
+          ${product.ml ? `<a class="button button-secondary" href="${emailHref(product)}">Consultar por email</a>` : ""}
         </div>
         <p class="dialog-description">${escapeHtml(product.description)}</p>
         <h3 class="spec-title">Características</h3>
         <ul class="spec-list">
           ${product.specs.map(spec => `<li>${escapeHtml(spec)}</li>`).join("")}
         </ul>
-        <p class="dialog-note">El precio y la disponibilidad final se confirman en la publicación de Mercado Libre al momento de la compra.</p>
+        <p class="dialog-note">${product.ml ? "El precio y la disponibilidad final se confirman en la publicación de Mercado Libre al momento de la compra." : "Este producto se vende por consulta directa: escribime y coordinamos el pago y la entrega."}</p>
       </div>
     </article>
   `;
