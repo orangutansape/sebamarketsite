@@ -181,10 +181,220 @@ const products = [
       "Entradas para pads y pedales externos.",
       "Salidas Master y Sub para mandar pistas y click por separado."
     ]
+  },
+  {
+    id: "nikon-d7100",
+    name: "Nikon D7100 + lente 18-105 mm VR — Réflex digital",
+    category: "Fotografía",
+    price: 1250000,
+    image: "./assets/photos/nikon-d7100-01.webp",
+    description: "Réflex digital Nikon D7100 con sensor DX de 24 MP y lente zoom Nikkor AF-S DX 18-105 mm VR con estabilizador. Una cámara de nivel avanzado, muy completa para foto y video.",
+    specs: [
+      "Sensor CMOS DX de 24,1 MP, sin filtro de paso bajo para más nitidez.",
+      "Enfoque automático de 51 puntos y ráfaga de hasta 6 fps.",
+      "Video Full HD 1080p y doble ranura para tarjetas SD.",
+      "Lente Nikkor AF-S DX 18-105 mm con estabilizador VR.",
+      "Usada: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "nikon-d80",
+    name: "Nikon D80 — Réflex digital (solo cuerpo)",
+    category: "Fotografía",
+    price: 580000,
+    image: "./assets/photos/nikon-d80-01.webp",
+    description: "Cuerpo de la réflex digital Nikon D80, con correa original. Compatible con lentes Nikon F, ideal para empezar en la fotografía réflex o como segundo cuerpo.",
+    specs: [
+      "Sensor CCD DX de 10,2 MP.",
+      "Pantalla LCD de 2,5\" y visor óptico pentaprisma.",
+      "Almacenamiento en tarjeta SD.",
+      "Se vende solo el cuerpo, sin lente.",
+      "Usada: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "canon-powershot-sx510-hs",
+    name: "Canon PowerShot SX510 HS — Cámara digital zoom 30x",
+    category: "Fotografía",
+    price: 500000,
+    image: "./assets/photos/canon-powershot-sx510-hs-01.webp",
+    description: "Cámara digital Canon PowerShot SX510 HS con zoom óptico de 30x y Wi‑Fi. Formato tipo bridge, fácil de usar, ideal para viajes y fotos de lejos. Incluye cargador.",
+    specs: [
+      "Sensor CMOS de 12,1 MP.",
+      "Zoom óptico 30x (24–720 mm equivalente) con estabilizador.",
+      "Wi‑Fi para pasar fotos al celular.",
+      "Video Full HD 1080p.",
+      "Incluye cargador de batería. Usada: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "gopro-hd-hero",
+    name: "GoPro HD HERO — Cámara de acción con carcasa",
+    category: "Fotografía",
+    price: 250000,
+    image: "./assets/photos/gopro-hd-hero-01.webp",
+    description: "Cámara de acción GoPro HD HERO con carcasa estanca transparente y cables. Para grabar deportes, viajes y aventuras en alta definición.",
+    specs: [
+      "Video en alta definición hasta 1080p.",
+      "Incluye carcasa sumergible transparente.",
+      "Incluye cables (ver fotos).",
+      "Usada: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "yashica-24",
+    name: "Yashica-24 — Cámara TLR de formato medio",
+    category: "Fotografía",
+    price: 745000,
+    image: "./assets/photos/yashica-24-01.webp",
+    description: "Clásica cámara Yashica-24 de doble objetivo (TLR) para película de formato medio, con imágenes cuadradas de 6×6. Un modelo de colección muy buscado para fotografía analógica.",
+    specs: [
+      "Cámara réflex de doble objetivo (TLR), formato 6×6.",
+      "Lentes Yashinon de 80 mm y obturador Copal-SV.",
+      "Visor de capilla plegable y avance con manivela.",
+      "Pensada para película de formato medio (rollos 220).",
+      "Usada, de colección: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "minolta-repo",
+    name: "Minolta Repo — Cámara analógica de medio cuadro",
+    category: "Fotografía",
+    price: 305000,
+    image: "./assets/photos/minolta-repo-01.webp",
+    description: "Compacta analógica Minolta Repo de medio cuadro: saca el doble de fotos por rollo de 35 mm. Pequeña, liviana y con estética clásica de los años 60.",
+    specs: [
+      "Formato medio cuadro sobre película de 35 mm (el doble de fotos por rollo).",
+      "Cuerpo metálico compacto.",
+      "Zapata para flash.",
+      "Usada, de colección: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "yashica-fx3-super",
+    name: "Yashica FX-3 Super + lente 50 mm f/1.9 — Réflex analógica",
+    category: "Fotografía",
+    price: 245000,
+    image: "./assets/photos/yashica-fx3-super-01.webp",
+    description: "Réflex analógica Yashica FX-3 Super, totalmente mecánica, con lente Yashica ML 50 mm f/1.9. Una de las mejores cámaras para aprender fotografía en película de 35 mm.",
+    specs: [
+      "Réflex manual de 35 mm con obturador mecánico.",
+      "Fotómetro con indicador LED en el visor.",
+      "Lente Yashica ML 50 mm f/1.9.",
+      "Usada: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "canon-av-1",
+    name: "Canon AV-1 + lente zoom — Réflex analógica",
+    category: "Fotografía",
+    price: 190000,
+    image: "./assets/photos/canon-av-1-01.webp",
+    description: "Réflex analógica Canon AV-1 de 35 mm con lente zoom. Exposición automática con prioridad de apertura: elegís el diafragma y la cámara calcula la velocidad.",
+    specs: [
+      "Réflex de 35 mm con montura Canon FD.",
+      "Exposición automática con prioridad de apertura.",
+      "Se vende con lente zoom (ver fotos).",
+      "Usada: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "sony-dsc-h5",
+    name: "Sony Cyber-shot DSC-H5 — Cámara digital zoom 12x",
+    category: "Fotografía",
+    price: 145000,
+    image: "./assets/photos/sony-dsc-h5-01.webp",
+    description: "Cámara digital Sony Cyber-shot DSC-H5 con zoom óptico de 12x Carl Zeiss y estabilizador Super SteadyShot. Formato bridge con visor electrónico y pantalla grande.",
+    specs: [
+      "Sensor de 7,2 MP.",
+      "Zoom óptico 12x Carl Zeiss Vario-Tessar.",
+      "Estabilizador óptico Super SteadyShot.",
+      "Pantalla LCD de 3\" y visor electrónico.",
+      "Funciona con 2 pilas AA. Usada: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "olympus-pen-ee2",
+    name: "Olympus Pen EE-2 — Cámara analógica de medio cuadro",
+    category: "Fotografía",
+    price: 120000,
+    image: "./assets/photos/olympus-pen-ee2-01.webp",
+    description: "Clásica compacta Olympus Pen EE-2 de medio cuadro: el doble de fotos por rollo de 35 mm. Exposición automática y enfoque fijo; sólo apuntás y disparás.",
+    specs: [
+      "Formato medio cuadro sobre película de 35 mm (hasta 72 fotos por rollo de 36).",
+      "Exposición automática con fotómetro de selenio, sin pilas.",
+      "Lente D.Zuiko 28 mm f/3.5 de enfoque fijo.",
+      "Usada, de colección: ver fotos para el estado."
+    ]
   }
 ];
 
 const galleryPhotos = {
+  "nikon-d7100": [
+    "./assets/photos/nikon-d7100-01.webp",
+    "./assets/photos/nikon-d7100-02.webp",
+    "./assets/photos/nikon-d7100-03.webp",
+    "./assets/photos/nikon-d7100-04.webp",
+    "./assets/photos/nikon-d7100-05.webp",
+    "./assets/photos/nikon-d7100-06.webp"
+  ],
+  "nikon-d80": [
+    "./assets/photos/nikon-d80-01.webp",
+    "./assets/photos/nikon-d80-02.webp",
+    "./assets/photos/nikon-d80-03.webp",
+    "./assets/photos/nikon-d80-04.webp",
+    "./assets/photos/nikon-d80-05.webp"
+  ],
+  "canon-powershot-sx510-hs": [
+    "./assets/photos/canon-powershot-sx510-hs-01.webp",
+    "./assets/photos/canon-powershot-sx510-hs-02.webp",
+    "./assets/photos/canon-powershot-sx510-hs-03.webp"
+  ],
+  "gopro-hd-hero": [
+    "./assets/photos/gopro-hd-hero-01.webp",
+    "./assets/photos/gopro-hd-hero-02.webp"
+  ],
+  "yashica-24": [
+    "./assets/photos/yashica-24-01.webp",
+    "./assets/photos/yashica-24-02.webp",
+    "./assets/photos/yashica-24-03.webp",
+    "./assets/photos/yashica-24-04.webp",
+    "./assets/photos/yashica-24-05.webp",
+    "./assets/photos/yashica-24-06.webp",
+    "./assets/photos/yashica-24-07.webp",
+    "./assets/photos/yashica-24-08.webp"
+  ],
+  "minolta-repo": [
+    "./assets/photos/minolta-repo-01.webp",
+    "./assets/photos/minolta-repo-02.webp",
+    "./assets/photos/minolta-repo-03.webp",
+    "./assets/photos/minolta-repo-04.webp"
+  ],
+  "yashica-fx3-super": [
+    "./assets/photos/yashica-fx3-super-01.webp",
+    "./assets/photos/yashica-fx3-super-02.webp",
+    "./assets/photos/yashica-fx3-super-03.webp",
+    "./assets/photos/yashica-fx3-super-04.webp"
+  ],
+  "canon-av-1": [
+    "./assets/photos/canon-av-1-01.webp",
+    "./assets/photos/canon-av-1-02.webp",
+    "./assets/photos/canon-av-1-03.webp",
+    "./assets/photos/canon-av-1-04.webp",
+    "./assets/photos/canon-av-1-05.webp"
+  ],
+  "sony-dsc-h5": [
+    "./assets/photos/sony-dsc-h5-01.webp",
+    "./assets/photos/sony-dsc-h5-02.webp",
+    "./assets/photos/sony-dsc-h5-03.webp",
+    "./assets/photos/sony-dsc-h5-04.webp",
+    "./assets/photos/sony-dsc-h5-05.webp"
+  ],
+  "olympus-pen-ee2": [
+    "./assets/photos/olympus-pen-ee2-01.webp",
+    "./assets/photos/olympus-pen-ee2-02.webp",
+    "./assets/photos/olympus-pen-ee2-03.webp"
+  ],
   "roland-sp-404a": [
     "./assets/photos/roland-sp-404a-01.webp",
     "./assets/photos/roland-sp-404a-02.webp",
