@@ -194,6 +194,7 @@ const products = [
       "Enfoque automático de 51 puntos y ráfaga de hasta 6 fps.",
       "Video Full HD 1080p y doble ranura para tarjetas SD.",
       "Lente Nikkor AF-S DX 18-105 mm con estabilizador VR.",
+      "También disponible en combo con el teleobjetivo 80-200 mm f/2.8.",
       "Usada: ver fotos para el estado."
     ]
   },
@@ -326,10 +327,193 @@ const products = [
       "Lente D.Zuiko 28 mm f/3.5 de enfoque fijo.",
       "Usada, de colección: ver fotos para el estado."
     ]
+  },
+  {
+    id: "nikon-d7100-80-200-combo",
+    name: "Combo Nikon D7100 + 18-105 mm VR + AF 80-200 mm f/2.8D ED",
+    category: "Fotografía",
+    price: 2400000,
+    image: "./assets/photos/nikon-d7100-80-200-combo-01.webp",
+    description: "Equipo completo: réflex Nikon D7100 con su lente 18-105 mm VR, más el teleobjetivo profesional AF Nikkor 80-200 mm f/2.8D ED con su estuche rígido. Comprando el combo ahorrás frente a llevarlos por separado.",
+    specs: [
+      "Nikon D7100: sensor DX de 24,1 MP, 51 puntos de enfoque y video Full HD.",
+      "Lente Nikkor AF-S DX 18-105 mm con estabilizador VR.",
+      "Teleobjetivo AF Nikkor 80-200 mm f/2.8D ED con estuche rígido Nikon.",
+      "También se venden por separado.",
+      "Usados: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "nikon-af-80-200-f28d",
+    name: "Nikon AF Nikkor 80-200 mm f/2.8D ED — Teleobjetivo",
+    category: "Fotografía",
+    price: 1420000,
+    image: "./assets/photos/nikon-af-80-200-f28d-01.webp",
+    description: "Teleobjetivo profesional Nikon AF Nikkor 80-200 mm f/2.8D ED, con apertura constante f/2.8 en todo el zoom. Ideal para retratos, deportes y eventos. Incluye estuche rígido original Nikon.",
+    specs: [
+      "Zoom 80-200 mm con apertura constante f/2.8.",
+      "Cristal ED para menos aberraciones y mejor nitidez.",
+      "Versión de doble anillo (zoom y enfoque separados), con collar para trípode.",
+      "Montura Nikon F: funciona con autofoco en cámaras con motor en el cuerpo (D7100, D80 y similares).",
+      "Incluye tapas y estuche rígido Nikon. Usado: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "vivitar-grip-d7100",
+    name: "Grip de batería Vivitar VIV-PG-D7100 para Nikon D7100",
+    category: "Fotografía",
+    price: 112000,
+    image: "./assets/photos/vivitar-grip-d7100-01.webp",
+    description: "Empuñadura de batería Vivitar para Nikon D7100: más autonomía y un disparador vertical para fotos en formato retrato.",
+    specs: [
+      "Compatible con Nikon D7100 (equivalente al MB-D15).",
+      "Disparador y diales para uso vertical.",
+      "Usa baterías EN-EL15.",
+      "Usado: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "grip-mb-d80",
+    name: "Grip de batería MB-D80 para Nikon D80 / D90",
+    category: "Fotografía",
+    price: 60000,
+    image: "./assets/photos/grip-mb-d80-01.webp",
+    description: "Empuñadura de batería tipo MB-D80 para Nikon D80 y D90: más autonomía y disparo vertical cómodo.",
+    specs: [
+      "Compatible con Nikon D80 y D90.",
+      "Disparador y diales para uso vertical.",
+      "Usa baterías EN-EL3e.",
+      "Usado: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "cargador-nikon-mh-25",
+    name: "Cargador Nikon MH-25 original para baterías EN-EL15",
+    category: "Fotografía",
+    price: 150000,
+    image: "./assets/photos/cargador-nikon-mh-25-01.webp",
+    description: "Cargador original Nikon MH-25 para baterías EN-EL15, con su cable. Sirve para D7100, D7000, D7200, D750, D800 y otras cámaras que usan EN-EL15.",
+    specs: [
+      "Cargador original Nikon modelo MH-25.",
+      "Para baterías EN-EL15.",
+      "Incluye cable de alimentación.",
+      "Usado: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "flash-yongnuo-yn460",
+    name: "Flash Yongnuo Speedlite YN460",
+    category: "Fotografía",
+    price: 90000,
+    image: "./assets/photos/flash-yongnuo-yn460-01.webp",
+    description: "Flash de zapata Yongnuo YN460, simple y potente, con cabezal giratorio para rebotar la luz. Funciona en cámaras con zapata estándar.",
+    specs: [
+      "Flash manual con 7 niveles de potencia.",
+      "Modos esclavo S1 y S2 para usarlo fuera de la cámara.",
+      "Cabezal con inclinación y giro.",
+      "Funciona con 4 pilas AA. Usado: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "flash-osram-s18-servo",
+    name: "Flash Osram S18 Servo",
+    category: "Fotografía",
+    price: 38000,
+    image: "./assets/photos/flash-osram-s18-servo-01.webp",
+    description: "Flash compacto Osram S18 Servo, un clásico para cámaras analógicas con zapata. Ideal para acompañar cualquiera de las cámaras de película del catálogo.",
+    specs: [
+      "Flash electrónico compacto de zapata.",
+      "Función servo (esclavo) para dispararse con otro flash.",
+      "Tabla de distancias en el cuerpo.",
+      "Usado, vintage: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "lote-filtros-parasoles",
+    name: "Lote de filtros, parasoles y tapas para lentes",
+    category: "Fotografía",
+    price: 45000,
+    image: "./assets/photos/lote-filtros-parasoles-01.webp",
+    description: "Lote de accesorios para lentes: filtros, parasoles y tapas. Se vende todo junto.",
+    specs: [
+      "3 filtros (2 transparentes/UV y 1 amarillo para blanco y negro).",
+      "Parasoles y aros.",
+      "Tapas de lente.",
+      "Consultá por los diámetros. Usados: ver fotos para el estado."
+    ]
+  },
+  {
+    id: "estuche-lente-sigma",
+    name: "Estuche para lente Sigma",
+    category: "Fotografía",
+    price: 21000,
+    image: "./assets/photos/estuche-lente-sigma-01.webp",
+    description: "Estuche acolchado Sigma para lente, con cierre y tapa. Protege lentes medianos en el bolso o la mochila.",
+    specs: [
+      "Estuche original Sigma.",
+      "Interior acolchado y tapa con cierre.",
+      "Para lentes de tamaño mediano.",
+      "Usado: ver fotos para el estado."
+    ]
   }
 ];
 
 const galleryPhotos = {
+  "nikon-d7100-80-200-combo": [
+    "./assets/photos/nikon-d7100-80-200-combo-01.webp",
+    "./assets/photos/nikon-d7100-80-200-combo-02.webp",
+    "./assets/photos/nikon-d7100-80-200-combo-03.webp",
+    "./assets/photos/nikon-d7100-80-200-combo-04.webp",
+    "./assets/photos/nikon-d7100-80-200-combo-05.webp",
+    "./assets/photos/nikon-d7100-80-200-combo-06.webp"
+  ],
+  "nikon-af-80-200-f28d": [
+    "./assets/photos/nikon-af-80-200-f28d-01.webp",
+    "./assets/photos/nikon-af-80-200-f28d-02.webp",
+    "./assets/photos/nikon-af-80-200-f28d-03.webp",
+    "./assets/photos/nikon-af-80-200-f28d-04.webp",
+    "./assets/photos/nikon-af-80-200-f28d-05.webp",
+    "./assets/photos/nikon-af-80-200-f28d-06.webp",
+    "./assets/photos/nikon-af-80-200-f28d-07.webp",
+    "./assets/photos/nikon-af-80-200-f28d-08.webp",
+    "./assets/photos/nikon-af-80-200-f28d-09.webp",
+    "./assets/photos/nikon-af-80-200-f28d-10.webp"
+  ],
+  "vivitar-grip-d7100": [
+    "./assets/photos/vivitar-grip-d7100-01.webp",
+    "./assets/photos/vivitar-grip-d7100-02.webp",
+    "./assets/photos/vivitar-grip-d7100-03.webp",
+    "./assets/photos/vivitar-grip-d7100-04.webp",
+    "./assets/photos/vivitar-grip-d7100-05.webp",
+    "./assets/photos/vivitar-grip-d7100-06.webp"
+  ],
+  "grip-mb-d80": [
+    "./assets/photos/grip-mb-d80-01.webp",
+    "./assets/photos/grip-mb-d80-02.webp",
+    "./assets/photos/grip-mb-d80-03.webp",
+    "./assets/photos/grip-mb-d80-04.webp"
+  ],
+  "cargador-nikon-mh-25": [
+    "./assets/photos/cargador-nikon-mh-25-01.webp"
+  ],
+  "flash-yongnuo-yn460": [
+    "./assets/photos/flash-yongnuo-yn460-01.webp",
+    "./assets/photos/flash-yongnuo-yn460-02.webp"
+  ],
+  "flash-osram-s18-servo": [
+    "./assets/photos/flash-osram-s18-servo-01.webp",
+    "./assets/photos/flash-osram-s18-servo-02.webp",
+    "./assets/photos/flash-osram-s18-servo-03.webp",
+    "./assets/photos/flash-osram-s18-servo-04.webp"
+  ],
+  "lote-filtros-parasoles": [
+    "./assets/photos/lote-filtros-parasoles-01.webp"
+  ],
+  "estuche-lente-sigma": [
+    "./assets/photos/estuche-lente-sigma-01.webp",
+    "./assets/photos/estuche-lente-sigma-02.webp",
+    "./assets/photos/estuche-lente-sigma-03.webp"
+  ],
   "nikon-d7100": [
     "./assets/photos/nikon-d7100-01.webp",
     "./assets/photos/nikon-d7100-02.webp",
