@@ -183,22 +183,6 @@ const products = [
     ]
   },
   {
-    id: "nikon-d7100",
-    name: "Nikon D7100 + lente 18-105 mm VR — Réflex digital",
-    category: "Fotografía",
-    price: 1250000,
-    image: "./assets/photos/nikon-d7100-01.webp",
-    description: "Réflex digital Nikon D7100 con sensor DX de 24 MP y lente zoom Nikkor AF-S DX 18-105 mm VR con estabilizador. Una cámara de nivel avanzado, muy completa para foto y video.",
-    specs: [
-      "Sensor CMOS DX de 24,1 MP, sin filtro de paso bajo para más nitidez.",
-      "Enfoque automático de 51 puntos y ráfaga de hasta 6 fps.",
-      "Video Full HD 1080p y doble ranura para tarjetas SD.",
-      "Lente Nikkor AF-S DX 18-105 mm con estabilizador VR.",
-      "También disponible en combo con el teleobjetivo 80-200 mm f/2.8.",
-      "Usada: ver fotos para el estado."
-    ]
-  },
-  {
     id: "nikon-d80",
     name: "Nikon D80 — Réflex digital (solo cuerpo)",
     category: "Fotografía",
@@ -339,7 +323,7 @@ const products = [
       "Nikon D7100: sensor DX de 24,1 MP, 51 puntos de enfoque y video Full HD.",
       "Lente Nikkor AF-S DX 18-105 mm con estabilizador VR.",
       "Teleobjetivo AF Nikkor 80-200 mm f/2.8D ED con estuche rígido Nikon.",
-      "También se venden por separado.",
+      "El teleobjetivo 80-200 mm también se vende por separado.",
       "Usados: ver fotos para el estado."
     ]
   },
@@ -513,14 +497,6 @@ const galleryPhotos = {
     "./assets/photos/estuche-lente-sigma-01.webp",
     "./assets/photos/estuche-lente-sigma-02.webp",
     "./assets/photos/estuche-lente-sigma-03.webp"
-  ],
-  "nikon-d7100": [
-    "./assets/photos/nikon-d7100-01.webp",
-    "./assets/photos/nikon-d7100-02.webp",
-    "./assets/photos/nikon-d7100-03.webp",
-    "./assets/photos/nikon-d7100-04.webp",
-    "./assets/photos/nikon-d7100-05.webp",
-    "./assets/photos/nikon-d7100-06.webp"
   ],
   "nikon-d80": [
     "./assets/photos/nikon-d80-01.webp",
