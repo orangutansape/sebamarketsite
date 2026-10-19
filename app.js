@@ -332,7 +332,7 @@ const products = [
     id: "nikon-d7100-80-200-combo",
     name: "Combo Nikon D7100 + 18-105 mm VR + AF 80-200 mm f/2.8D ED",
     category: "Fotografía",
-    price: 2400000,
+    price: 2200000,
     image: "./assets/photos/nikon-d7100-80-200-combo-01.webp",
     description: "Equipo completo: réflex Nikon D7100 con su lente 18-105 mm VR, más el teleobjetivo profesional AF Nikkor 80-200 mm f/2.8D ED con su estuche rígido. Comprando el combo ahorrás frente a llevarlos por separado.",
     specs: [
